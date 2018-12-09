@@ -12,8 +12,8 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormGroup from '@material-ui/core/FormGroup';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import {Link, BrowserRouter as Route} from 'react-router-dom';
 import Login from '../Login';
-import Link from 'react-router-dom';
 
 const styles = {
   root: {
@@ -46,7 +46,7 @@ class Header extends Component {
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
-
+  
   render() {
     const { classes } = this.props;
     const { auth, anchorEl } = this.state;
@@ -86,14 +86,16 @@ class Header extends Component {
                   open={open}
                   onClose={this.handleClose}
                 >
-                  <MenuItem onClick={this.handleClose}><AccountCircle />Login</MenuItem>
+                  <MenuItem><AccountCircle /><Login /></MenuItem>
                   <MenuItem onClick={this.handleClose}>Your Orders</MenuItem>
-                  <MenuItem onClick={this.handleClose}>Sign Up</MenuItem>
+                  
                 </Menu>
+                <Route path="/login" component={Login} />
               </div>
             )}
           </Toolbar>
         </AppBar>
+        
       </div>
     );
   }
