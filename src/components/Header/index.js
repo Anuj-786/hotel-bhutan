@@ -14,6 +14,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import {Link, BrowserRouter as Route} from 'react-router-dom';
 import Login from '../Login';
+import Link from 'react-router-dom';
+import logo from '../../logo.png';
+
 
 const styles = {
   root: {
@@ -26,6 +29,14 @@ const styles = {
     marginLeft: -12,
     marginRight: 20,
   },
+  seprate: {
+  	alignItems: 'center',
+  	webkitalignItems: 'center',
+  	justifyContent: 'space-between',
+  	webkitjustifyContent: 'space-between',
+  	display: 'flex',
+  	display: '-webkit-flex'
+  }
 };
 
 class Header extends Component {
@@ -54,14 +65,15 @@ class Header extends Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="secondary">
-          <Toolbar>
+        <AppBar position="static" color="secondary" className="header">
+          
+          <Toolbar style={styles.seprate}>
+          <div style={styles.seprate}>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" className={classes.grow}>
-             Hotel Bhutan's
-            </Typography>
+            <img src={logo} width="150" alt="logo" style={{borderRadius: '5px',backgroundClip:'padding-box'}}/>
+            </div>
             {auth && (
               <div>
                 <IconButton

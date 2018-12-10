@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
+import Datepicker1 from './datepicker';
+import IntegrationReactSelect from './autocomplete';
+import ClickAway from './rooms';
+import SearchForm from './searchForm';
 
-class SearchForm extends Component {
-    render() {
-        return (
-            <div>
-                <p>Search Form</p>
-            </div>
-        )
-    }
-}
 
-export default SearchForm; 
+export  {
+      Datepicker1, IntegrationReactSelect,ClickAway,SearchForm
+} 

@@ -1,0 +1,25 @@
+.DateInput_input {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 16px;
+	padding: 0;
+	color: rgba(0, 0, 0, 0.54);
+}
+.DateRangePickerInput__withBorder {
+	border: none;
+}
+
+.DateInput_input__focused
+{
+	border-bottom: 2px solid #303f9f;
+}
+.rooms-select input[type='text'] {
+	color: rgba(0,0,0,0.54);
+	font-size: 16px;
+}
+button.minus-1,button.childminus-0 {
+	pointer-events: none;
+}
+button.minus-1 svg,button.childminus-0 svg {
+	fill: rgba(0, 0, 0, 0.25);
+}
