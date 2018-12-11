@@ -14,7 +14,6 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import {Link, BrowserRouter as Route} from 'react-router-dom';
 import Login from '../Login';
-import Link from 'react-router-dom';
 import logo from '../../logo.png';
 
 

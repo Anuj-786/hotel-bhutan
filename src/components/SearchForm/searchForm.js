@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import CalenderTodayIcon from '@material-ui/icons/CalendarToday';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
-
+import { Link} from 'react-router-dom'
 
  const styles = {
     something: {
@@ -38,8 +38,10 @@ class SearchForm extends Component {
 	}
       buttonClick = (e) => {
             e.preventDefault();
-            console.log(this.state.location);
-            
+            // console.log(this.state.location);
+            return (
+                  <Link to="HotelListing" />
+            )
 
 
       }
@@ -52,30 +54,29 @@ class SearchForm extends Component {
 	render() {
 		return (
 
-       <div className="search-form">
-       	  <form onSubmit={this.buttonClick}>
-               <Grid container spacing={24}>
-                <Grid item xs={12} style={styles.something}>
-                  <LocationOnIcon style={styles.svg}/>
-       	  	<IntegrationReactSelect location={this.handleLoction} ref="location" style={{borderBottom: 'none'}}/>
-                </Grid>
-                 <Grid item xs={12} sm={6} style={styles.something}>
-                 <CalenderTodayIcon style={styles.svg}/>
-       	  	<Datepicker1 />
-                 </Grid>
-                  <Grid item xs={12} sm={6} style={styles.something}>
-                  <GroupAddIcon style={styles.svg}/>
-       	  	<ClickAway />
+      <div className="search-form">
+            <form onSubmit={this.buttonClick}>
+                  <Grid container spacing={24}>
+                        <Grid item xs={12} style={styles.something}>
+                              <LocationOnIcon style={styles.svg}/>
+       	  	            <IntegrationReactSelect location={this.handleLoction} ref="location" style={{borderBottom: 'none'}}/>
+                        </Grid>
+                        <Grid item xs={12} sm={6} style={styles.something}>
+                              <CalenderTodayIcon style={styles.svg}/>
+                              <Datepicker1 />
+                        </Grid>
+                        <Grid item xs={12} sm={6} style={styles.something}>
+                              <GroupAddIcon style={styles.svg}/>
+                              <ClickAway />
+                        </Grid>
+                        <Grid item xs={12}>
+                              <Button type="submit" variant="contained" color="secondary" style = {{textTransform: 'none',fontWeight: 'bold' }}>
+                              <Link style={{display: 'flex', color: '#fff', textDecoration: 'none', fontSize: 16}} to="/HotelListing" >Find a Deal <RightIcon style={{paddingLeft: '5px'}}></RightIcon>
+                              </Link></Button>     
+                        </Grid>
                   </Grid>
-                  <Grid item xs={12}>
-            <Button type="submit" variant="contained" color="secondary" style = {{textTransform: 'none',fontWeight: 'bold' }}>
-             Find a Deal <RightIcon style={{paddingLeft: '5px'}}></RightIcon>
-      </Button>
-      </Grid>
-      </Grid>
-       	  </form>
-
-       </div>
+       	</form>
+      </div>
 
 		)
 	}

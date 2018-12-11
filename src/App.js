@@ -1,10 +1,9 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Route, Link, Redirect, withRouter } from 'react-router-dom'
 import Header from './components/Header';
-import Banner from './components/Banner';
-import PopularLocation from './components/PopularLocation';
-import ABC from './components/Location';
+import Home from './components/Home'
 import './App.css';
+import HotelListing from './components/HotelListing';
 
 class App extends Component {
   componentDidMount() {
@@ -15,9 +14,13 @@ class App extends Component {
      
         <div>
           <Header position="fixed"/>
-          <Banner />
-          <ABC />
-          <PopularLocation />
+          <Router>
+            <div>
+              <Route path="/" exact component={Home} />
+              <Route path="/HotelListing" component={HotelListing} />
+            </div>
+          </Router>
+         
         </div>
      
     );

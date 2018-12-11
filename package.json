@@ -5,6 +5,8 @@
   "dependencies": {
     "@material-ui/core": "^3.6.1",
     "@material-ui/icons": "^3.0.1",
+    "@material-ui/lab": "^3.0.0-alpha.25",
+    "material-ui-rating": "^2.0.0",
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "react": "^16.6.3",
@@ -13,6 +15,7 @@
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1",
     "react-select": "^2.1.2",
+    "react-star-rating-component": "^1.4.1",
     "react-swipeable-views": "^0.13.0"
   },
   "scripts": {
