@@ -113,7 +113,7 @@ class TextMobileStepper2 extends React.Component {
               title={tutorialSteps[activeStep].label}
               actionIcon={
                 <IconButton className={classes.icon}>
-                  <InfoIcon />
+                  <InfoIcon style={{fill: "#fff"}}/>
                 </IconButton>
               }
             />

@@ -73,8 +73,11 @@ class Header extends Component {
             </IconButton>
             <img src={logo} width="150" alt="logo" style={{borderRadius: '5px',backgroundClip:'padding-box'}}/>
             </div>
+            <div style={{display:'flex',alignItems:'center',justifyContent:'space-around'}}>
+             <a href="#" style={{color:'#fff',textDecoration:'none'}}>List your Property</a>
             {auth && (
               <div>
+
                 <IconButton
                   aria-owns={open ? 'menu-appbar' : undefined}
                   aria-haspopup="true"
@@ -104,7 +107,9 @@ class Header extends Component {
                 <Route path="/login" component={Login} />
               </div>
             )}
+            </div>
           </Toolbar>
+
         </AppBar>
         
       </div>
