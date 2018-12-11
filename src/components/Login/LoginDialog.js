@@ -14,6 +14,8 @@ import InputLabel from '@material-ui/core/InputLabel';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
+import TextField from '@material-ui/core/TextField';
 
 const styles = theme => ({
     root: {
@@ -53,7 +55,7 @@ class LoginDialog extends Component {
         const {theme } = this.props;
       return (
         <Dialog onClose={this.handleClose} aria-labelledby="simple-dialog-title" {...other}>
-          <DialogTitle style={{backgroundColor: '#f50057'}} id="simple-dialog-title"><Typography variant="title" style={{color: '#fff', fontSize: 18}}>Login Or Register to hotel Bhutan's</Typography></DialogTitle>
+          <DialogTitle style={{backgroundColor: '#f50057'}} id="simple-dialog-title"><Typography variant="title" style={{color: '#fff', fontSize: 18}}>Login Or Register to Hotel Booking-Bt</Typography></DialogTitle>
           <div>
             <Tabs
                 value={this.state.value}
@@ -73,81 +75,76 @@ class LoginDialog extends Component {
                 >
                 <TabContainer dir={theme.direction}>
                     <FormControl className={classes.margin} fullWidth= "true" required="true">
-                        
-                        <Input
-                        id="input-with-icon-adornment"
-                        placeholder="User Email"
-                        type="email"
+                        <Grid container spacing={24}>
+                            <Grid item xs={12}>
+                        <TextField
+                        id="email"
+                        label ="Email/Phone"
                         required
-                        startAdornment={
-                            <InputAdornment position="center">
-                            <AccountCircle />
-                            </InputAdornment>
-                        }
-                        /><br />
-                        
-                        <Input
-                        id="input-with-icon-password"
-                        placeholder="Password"
-                        type="password"
-                        required
-                        startAdornment={
-                            <InputAdornment position="center">
-                            <AccountCircle />
-                            </InputAdornment>
-                        }
+                        fullWidth
+                      
                         />
+
+                        </Grid>
+                          <Grid item xs={12}>
+                        <TextField
+                        id="password"
+                        label ="Password"
+                        required
+                        fullWidth
+                        type="password"
+                      
+                        />
+
+                        </Grid>
+
+                        </Grid>
+                        
+                    
                         <Button variant="contained" color="secondary" className={classes.button} style={{width: 100, marginTop: 20}}>Login</Button>
                     </FormControl>
                 </TabContainer>
                 <TabContainer dir={theme.direction}>
                 <FormControl className={classes.margin} fullWidth= "true" required="true">
-                        
-                        <Input
-                        id="input-with-icon-adornment"
-                        placeholder="Email"
+                          <Grid container spacing={24}>
+                            <Grid item xs={12}>
+                        <TextField
+                        id="emailenter"
+                        label ="Email"
+                        required
+                        fullWidth
                         type="email"
-                        required
-                        startAdornment={
-                            <InputAdornment position="center">
-                            <AccountCircle />
-                            </InputAdornment>
-                        }
+                      
                         />
-                        
-                        <Input
-                        id="input-with-icon-password"
-                        placeholder="Address"
-                        type="text"
+
+                        </Grid>
+                          <Grid item xs={12}>
+                        <TextField
+                        id="phponeenter"
+                        label ="Phone"
                         required
-                        startAdornment={
-                            <InputAdornment position="center">
-                            <AccountCircle />
-                            </InputAdornment>
-                        }
-                        />
-                        <Input
-                        id="input-with-icon-password"
-                        placeholder="Mobile Number"
+                        fullWidth
                         type="number"
-                        required
-                        startAdornment={
-                            <InputAdornment position="center">
-                            <AccountCircle />
-                            </InputAdornment>
-                        }
+                      
                         />
-                        <Input
-                        id="input-with-icon-password"
-                        placeholder="Password"
+
+                        </Grid>
+                         <Grid item xs={12}>
+                        <TextField
+                        id="pass"
+                        label ="password"
+                        required
+                        fullWidth
                         type="password"
-                        required
-                        startAdornment={
-                            <InputAdornment position="center">
-                            <AccountCircle />
-                            </InputAdornment>
-                        }
+                      
                         />
+
+                        </Grid>
+
+
+                        </Grid>
+                                         
+
                         <Button variant="contained" color="secondary" className={classes.button} style={{width: 100, marginTop: 20}}>Sign Up</Button>
                     </FormControl>
                 </TabContainer>

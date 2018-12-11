@@ -5,7 +5,8 @@ import Banner from './components/Banner';
 import PopularLocation from './components/PopularLocation';
 import ABC from './components/Location';
 import './App.css';
-
+import ACG from './components/multistepform/groupbooking';
+import Footer from './components/footer';
 class App extends Component {
   componentDidMount() {
     
@@ -17,7 +18,7 @@ class App extends Component {
           <Header position="fixed"/>
           <Banner />
           <ABC />
-          <PopularLocation />
+          <Footer/>
         </div>
      
     );
