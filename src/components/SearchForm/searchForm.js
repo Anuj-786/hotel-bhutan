@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import CalenderTodayIcon from '@material-ui/icons/CalendarToday';
 import GroupAddIcon from '@material-ui/icons/GroupAdd';
-import { Link} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 
  const styles = {
     something: {
@@ -32,16 +32,21 @@ class SearchForm extends Component {
 		super(props);
             this.state = {
                 location:"",
-                days: ""
+                days: "",
+                toListing: false
             }
 
 	}
       buttonClick = (e) => {
             e.preventDefault();
-            // console.log(this.state.location);
-            return (
-                  <Link to="HotelListing" />
-            )
+            if(this.state.location === '') {
+              alert("location is empty");
+            }
+            else {
+              this.setState({
+                  toListing: true
+              })
+          }
 
 
       }
@@ -52,6 +57,9 @@ class SearchForm extends Component {
        
       }
 	render() {
+    if (this.state.toListing === true) {
+      return <Redirect to='/HotelListing' />
+    }
 		return (
 
       <div className="search-form">
@@ -71,8 +79,8 @@ class SearchForm extends Component {
                         </Grid>
                         <Grid item xs={12}>
                               <Button type="submit" variant="contained" color="secondary" style = {{textTransform: 'none',fontWeight: 'bold' }}>
-                              <Link style={{display: 'flex', color: '#fff', textDecoration: 'none', fontSize: 16}} to="/HotelListing" >Find a Deal <RightIcon style={{paddingLeft: '5px'}}></RightIcon>
-                              </Link></Button>     
+                              Find a Deal <RightIcon style={{paddingLeft: '5px'}}></RightIcon>
+                              </Button>     
                         </Grid>
                   </Grid>
        	</form>
