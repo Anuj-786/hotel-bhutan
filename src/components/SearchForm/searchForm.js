@@ -60,7 +60,7 @@ class SearchForm extends Component {
                         <Grid item xs={12} style={styles.something}>
                               <LocationOnIcon style={styles.svg}/>
        	  	            <IntegrationReactSelect location={this.handleLoction} ref="location" style={{borderBottom: 'none'}}/>
-                        </Grid>
+                        </Grid> 
                         <Grid item xs={12} sm={6} style={styles.something}>
                               <CalenderTodayIcon style={styles.svg}/>
                               <Datepicker1 />

@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import SidebarFilters from './SidebarFilters'
 import Listing from './HotelListing'
+import SearchFormListing from './SearchForm';
 
 const styles = theme => ({
     root: {
@@ -26,6 +27,11 @@ class HotelListing extends Component {
         return (
             <div variant="title" className={classes.root}>
                 <Grid container spacing={24}>
+                       
+                    <Grid item xs={12}>
+                        <SearchFormListing />
+                    </Grid>
+                   
                     <Grid item xs={12} style={{margin: '25px 0px 0px 25px'}}>
                         <Typography style={{fontSize: 28}}>Hotels in Location</Typography>
                     </Grid>

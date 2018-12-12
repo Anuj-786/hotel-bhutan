@@ -12,6 +12,7 @@ import StarRatingComponent from 'react-star-rating-component';
 import LocationOn from '@material-ui/icons/LocationOn';
 import { Link } from 'react-router-dom';
 
+
 const styles = theme => ({
     root: {
       flexGrow: 1,
