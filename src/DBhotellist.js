@@ -14,3 +14,28 @@ export const hotels = [
 
 ]
 
+export const districts = [
+
+ {location: "Bumthang"},
+ {location:"Phuentsholing"},
+ {location:"Dagana"},
+ {location:"Gasa"},
+ {location:"Haa"},
+ {location:"Lhuentse"},
+ {location:"Mongar"},
+ {location:"Paro"},
+ {location:"Pema Gatshel"},
+ {location:"Punakha"},
+ {location:"Samdrup Jongkhar"},
+ {location:"Samtse"},
+ {location:"Gelephu"},
+ {location:"Thimphu"},
+ {location:"Trashigang"},
+ {location:"Trashiyangtse"},
+ {location:"Trongsa"},
+ {location:"Tsirang"},
+ {location:"Wangdue"}, 
+ {location:"Zhemgang"}           
+
+
+]

@@ -11,10 +11,10 @@ import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
 import CancelIcon from '@material-ui/icons/Cancel';
 import { emphasize } from '@material-ui/core/styles/colorManipulator';
-import {hotels} from '../../DBhotellist';
+import {districts} from '../../DBhotellist';
 
 
-const locations = hotels.map(el => ({
+const locations = districts.map(el => ({
     value: el.location,
     label: el.location
 }))

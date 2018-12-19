@@ -6,6 +6,7 @@ import './App.css';
 import Footer from './components/footer';
 
 import HotelListing from './components/HotelListing';
+import {GroupBooking} from './components/multistepform';
 
 
 class App extends Component {
@@ -22,8 +23,10 @@ class App extends Component {
             <div>
               <Route path="/" exact component={Home} />
               <Route path="/HotelListing" component={HotelListing} />
+              <Route path="/groupbooking" component={GroupBooking} />
             </div>
           </Router>
+       
           <Footer/>
 
         </div>
