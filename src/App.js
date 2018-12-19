@@ -4,9 +4,9 @@ import Header from './components/Header';
 import Home from './components/Home'
 import './App.css';
 import Footer from './components/footer';
-
 import HotelListing from './components/HotelListing';
-
+import HotelPage from './components/HotelPage';
+import Booking from './components/Booking';
 
 class App extends Component {
   componentDidMount() {
@@ -22,6 +22,8 @@ class App extends Component {
             <div>
               <Route path="/" exact component={Home} />
               <Route path="/HotelListing" component={HotelListing} />
+              <Route path="/HotelPage"  component={HotelPage}></Route>
+              <Route path="/Booking" component={Booking}></Route>
             </div>
           </Router>
           <Footer/>
