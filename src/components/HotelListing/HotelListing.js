@@ -12,6 +12,7 @@ import StarRatingComponent from 'react-star-rating-component';
 import LocationOn from '@material-ui/icons/LocationOn';
 import { Link } from 'react-router-dom';
 
+
 const styles = theme => ({
     root: {
       flexGrow: 1,
@@ -39,7 +40,7 @@ class Listing extends Component {
                     <Grid container spacing={16}>
                         <Grid item style={{padding: '0px 0px 0px 20px'}}>
                             <ButtonBase className={classes.image}>
-                                <img width={250} className={classes.img} alt="complex" src={require('../../assets/1.jpg')} />
+                                <Link to='/HotelPage'><img width={250} className={classes.img} alt="complex" src={require('../../assets/1.jpg')} /></Link>
                             </ButtonBase>
                         </Grid>
                         <Grid item style={{padding: '0px 40px 0px 30px'}}>
@@ -60,7 +61,7 @@ class Listing extends Component {
                         <Grid item style={{padding: '0px 30px 0px 40px', flexDirection: 'row', alignSelf: 'start', textAlign: 'end' }}>
                             <Button   color="secondary" className={classes.button}>₹ 1,999</Button>
                             <Typography varient="caption">+₹ 0 taxes and charges</Typography>
-                            <Button variant="contained"  color="secondary" className={classes.bookNowBtn}>Book Now</Button>
+                            <Link to='/HotelPage' style={{textDecoration: 'none'}}><Button variant="contained"  color="secondary" className={classes.bookNowBtn}>Book Now</Button></Link>
                         </Grid>
                     </Grid>
                     </Paper>

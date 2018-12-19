@@ -4,9 +4,12 @@ import Header from './components/Header';
 import Home from './components/Home'
 import './App.css';
 import Footer from './components/footer';
-
 import HotelListing from './components/HotelListing';
+
 import {GroupBooking} from './components/multistepform';
+
+import HotelPage from './components/HotelPage';
+import Booking from './components/Booking';
 
 
 class App extends Component {
@@ -24,6 +27,8 @@ class App extends Component {
               <Route path="/" exact component={Home} />
               <Route path="/HotelListing" component={HotelListing} />
               <Route path="/groupbooking" component={GroupBooking} />
+              <Route path="/HotelPage"  component={HotelPage}></Route>
+              <Route path="/Booking" component={Booking}></Route>
             </div>
           </Router>
        
